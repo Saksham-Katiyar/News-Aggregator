@@ -45,7 +45,7 @@ def scrape(request):
         new_headline.image = image_src
         b = False
         for word in keywords:
-            if word in title.lower():
+            if word.lower() in title.lower():
                 b = True
         if b:
             new_headline.save()
