@@ -18,4 +18,4 @@ You should see something like this in the terminal:<br>
 The web server will be running on `http://127.0.0.1:8000/` as shown in the terminal. Copy the url, paste it in your browser and hit enter. The webpage will look something like this:<br>
 ![ss1](./Screenshots/Screenshot1.png)
 
-Hit the button "Get news" to update the news. If the page is blank then maybe none of the articles matches with the given keyword list.
+Hit the button "Get news" to update the news. If the page is blank then maybe none of the articles matches with the given keyword list. You can add/subtract/edit words in the list `keywords` in "news/views.py" file.
