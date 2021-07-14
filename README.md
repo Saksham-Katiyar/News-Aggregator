@@ -8,6 +8,8 @@ Clone this repository in your local system and open the directory using<br>
 
 Launch the python virtual environment using the command <br>
 `source env/bin/activate`
+Or alternatively, you may just install the dependencies using pip <br>
+`python3 -m pip install requests BeautifulSoup4 django`
 
 Run the Django web app server using command <br>
 `python3 manage.py runserver`
