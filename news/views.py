@@ -23,9 +23,10 @@ def scrape(request):
     content = session.get(url, verify=False).content
     soup = BSoup(content, "html.parser")
     News = soup.select("article.sc-1pw4fyi-5.hgZOhx.js_post_item")
-    print(len(News))
+    print("Total articles collected: "+str(len(News)))
 
     Headline.objects.all().delete()
+    filtered = 0
 
     for article in News:
         main = article.find_all('a')[0]
@@ -49,5 +50,7 @@ def scrape(request):
                 b = True
         if b:
             new_headline.save()
+            filtered += 1
+    print("Filtered articles: "+str(filtered))
         
     return redirect("/")
