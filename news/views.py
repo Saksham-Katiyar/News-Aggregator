@@ -7,14 +7,14 @@ from news.models import Headline
 
 requests.packages.urllib3.disable_warnings()
 
+keywords = ['student', 'study', 'infrastructure', 'covid', 'mario', 'ranger']
+
 def news_list(request):
     headlines = Headline.objects.all()
     context = {
         'object_list':headlines,
     }
     return render(request, "home.html", context)
-
-keywords = ['student', 'study', 'democracy', 'infrastructure', 'game']
 
 def scrape(request):
     session = requests.Session()
